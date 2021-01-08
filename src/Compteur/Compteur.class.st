@@ -17,3 +17,13 @@ Compteur >> count [
 Compteur >> count: anInteger [ 
 	count := anInteger 
 ]
+
+{ #category : #API }
+Compteur >> decrement [ 
+		count:= count - 1
+]
+
+{ #category : #accessing }
+Compteur >> increment [ 
+		count:= count +1
+]
