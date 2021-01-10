@@ -8,6 +8,14 @@ Class {
 }
 
 { #category : #tests }
+CompteurTest >> testBeginWithFour [
+
+	| c |
+	c:= Compteur BeginWith: 4.
+	self assert: c count equals: 4
+]
+
+{ #category : #tests }
 CompteurTest >> testCountIsSetAndRead [
 	| c |
 	c := Compteur new.
@@ -33,4 +41,9 @@ CompteurTest >> testIncrement [
 	self assert: c count equals: 7.
 	c increment.
 	self assert: c count equals: 8.
+]
+
+{ #category : #tests }
+CompteurTest >> testValueAtCreationTimeIsZero [
+	self assert: Compteur new count equals: 0
 ]
